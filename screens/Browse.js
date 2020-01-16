@@ -10,14 +10,14 @@ import {
 import { Icon } from "native-base";
 import { Card, Badge, Button, Block, Text } from "../components";
 import { theme, mocks } from "../constants";
-import explore_3 from "../assets/images/explore_3.png";
+import explore_3 from "../assets/icons/plants_1.png";
 
 const { width } = Dimensions.get("window");
 const isAndroid = Platform.OS == "android" ? true : false;
 
 class Browse extends Component {
   state = {
-    active: "Products",
+    active: "Services",
     categories: []
   };
 
@@ -54,7 +54,7 @@ class Browse extends Component {
   render() {
     const { profile, navigation } = this.props;
     const { categories } = this.state;
-    const tabs = ["Products", "Inspirations", "Shop"];
+    const tabs = ["Services", "Inspirations", "Shop"];
 
     return (
       <Block style={{ marginTop: isAndroid ? 50 : 30 }}>
@@ -103,6 +103,46 @@ class Browse extends Component {
               </Card>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate("Irrigation")}>
+              <Card center middle shadow style={styles.category}>
+                <Badge
+                  margin={[0, 0, 15]}
+                  size={50}
+                  color="rgba(41,216,143,0.20)"
+                >
+                  <Image source={explore_3} />
+                </Badge>
+                <Text medium height={20}>
+                  Irrigation
+                </Text>
+                <Text
+                  style={{
+                    textAlign: "center"
+                  }}
+                  gray
+                  caption
+                >
+                  Get the right method for you
+                </Text>
+              </Card>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate("Weather")}>
+              <Card center middle shadow style={styles.category}>
+                <Badge
+                  margin={[0, 0, 15]}
+                  size={50}
+                  color="rgba(41,216,143,0.20)"
+                >
+                  <Image source={explore_3} />
+                </Badge>
+                <Text medium height={20}>
+                  Weather
+                </Text>
+                <Text gray caption>
+                  Blah Blah
+                </Text>
+              </Card>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate("Sprinkle")}>
               <Card center middle shadow style={styles.category}>
                 <Badge
                   margin={[0, 0, 15]}

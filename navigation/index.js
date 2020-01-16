@@ -14,6 +14,7 @@ import Settings from "../screens/Settings";
 import Chat from "../screens/Chat";
 import Irrigation from "../screens/Irrigation";
 import Weather from "../screens/Weather";
+import Sprinkle from "../screens/Sprinkle";
 
 import { theme } from "../constants";
 
@@ -29,7 +30,8 @@ const screens = createStackNavigator(
     Settings,
     Chat,
     Irrigation,
-    Weather
+    Weather,
+    Sprinkle
   },
   {
     defaultNavigationOptions: {
